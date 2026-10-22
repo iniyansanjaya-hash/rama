@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 AU Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font bergaya iOS -->
+    <link rel="stylesheet" href="https://googleapis.com">
+</head>
+<body>
+
+    <div class="iphone-15">
+        <!-- Dynamic Island Khas iPhone 15 -->
+        <div class="dynamic-island"></div>
+
+        <!-- ================= HALAMAN 1: LOCK SCREEN ================= -->
+        <div class="screen lock-screen" id="lockScreen" onclick="showPasscode()">
+            <!-- Status Bar Atas -->
+            <div class="status-bar">
+                <span class="provider">Telkomsel</span>
+                <div class="status-icons">📶 4G 🔋 85%</div>
+            </div>
+
+            <!-- Jam & Tanggal Jam Gede iOS -->
+            <div class="ios-time-wrapper">
+                <p id="iosDate">Kamis, 22 Oktober</p>
+                <h1 id="iosClock">10:14</h1>
+            </div>
+
+            <!-- Widget Note / Memo Awal -->
+            <div class="ios-widget memo-widget">
+                <div class="widget-header">📝 MEMO</div>
+                <p><strong>Belanja Toko Kue:</strong> Kue bulan, puding strawberry, gummy bears, buket bunga...</p>
+            </div>
+
+            <!-- Widget Music Player di Lock Screen -->
+            <div class="ios-widget music-widget">
+                <div class="music-info">
+                    <div class="music-cover">🎵</div>
+                    <div>
+                        <h4>Hari Yang Baik Untuk Berbohong</h4>
+                        <p>Hindia</p>
+                    </div>
+                </div>
+                <div class="music-controls">
+                    <span>⏮️</span> <span>⏸️</span> <span>⏭️</span>
+                </div>
+            </div>
+
+            <!-- Petunjuk Geser Bawah -->
+            <div class="bottom-hint">Swipe up atau klik untuk membuka</div>
+        </div>
+
+        <!-- ================= HALAMAN 2: PASSCODE SCREEN ================= -->
+        <div class="screen passcode-screen" id="passcodeScreen">
+            <p class="passcode-msg">Masukkan Sandi</p>
+            <div class="dots-container">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            
+            <div class="ios-keypad">
+                <button class="num-key" onclick="pressNum('1')">1</button>
+                <button class="num-key" onclick="pressNum('2')">2</button>
+                <button class="num-key" onclick="pressNum('3')">3</button>
+                <button class="num-key" onclick="pressNum('4')">4</button>
+                <button class="num-key" onclick="pressNum('5')">5</button>
+                <button class="num-key" onclick="pressNum('6')">6</button>
+                <button class="num-key" onclick="pressNum('7')">7</button>
+                <button class="num-key" onclick="pressNum('8')">8</button>
+                <button class="num-key" onclick="pressNum('9')">9</button>
+                <button class="label-key" onclick="cancelPasscode()">Batal</button>
+                <button class="num-key" onclick="pressNum('0')">0</button>
+                <button class="label-key" onclick="deleteNum()">Hapus</button>
+            </div>
+        </div>
+
+        <!-- ================= HALAMAN 3: HOME SCREEN (BERANDA) ================= -->
+        <div class="screen home-screen" id="homeScreen">
+            <!-- Grid Aplikasi iPhone -->
+            <div class="app-grid">
+                <div class="app-item" onclick="alert('Membuka Kalender')">
+                    <div class="app-icon icon-cal">📅</div>
+                    <span>Kalender</span>
+                </div>
+                <div class="app-item" onclick="alert('Membuka Jam')">
+                    <div class="app-icon icon-clock">⏰</div>
+                    <span>Jam</span>
+                </div>
+                <div class="app-item" onclick="alert('Membuka Kamera')">
+                    <div class="app-icon icon-cam">📷</div>
+                    <span>Kamera</span>
+                </div>
+                <div class="app-item" onclick="alert('Membuka WhatsApp')">
+                    <div class="app-icon icon-wa">💬</div>
+                    <span>WhatsApp</span>
+                </div>
+            </div>
+
+            <!-- Dock Aplikasi Bagian Bawah Khas iOS -->
+            <div class="ios-dock">
+                <div class="app-item" onclick="alert('Membuka Panggilan')">
+                    <div class="app-icon icon-phone">📞</div>
+                </div>
+                <div class="app-item" onclick="alert('Membuka Music')">
+                    <div class="app-icon icon-music">🎵</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+                  </html>
+                  
